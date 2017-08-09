@@ -8,7 +8,7 @@ using Wastelander.Models;
 namespace Wastelander.Migrations
 {
     [DbContext(typeof(WastelanderContext))]
-    [Migration("20170809164039_Initial")]
+    [Migration("20170809171326_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -234,9 +234,13 @@ namespace Wastelander.Migrations
 
                     b.Property<string>("Name");
 
+                    b.Property<string>("UserId");
+
                     b.HasKey("PlayerId");
 
                     b.HasIndex("LocationId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Players");
                 });
@@ -330,6 +334,10 @@ namespace Wastelander.Migrations
                         .WithMany()
                         .HasForeignKey("LocationId")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Wastelander.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Wastelander.Models.PlayerItems", b =>

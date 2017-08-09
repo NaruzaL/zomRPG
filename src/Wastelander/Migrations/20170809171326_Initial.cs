@@ -217,7 +217,8 @@ namespace Wastelander.Migrations
                     Expierience = table.Column<int>(nullable: false),
                     LocationId = table.Column<int>(nullable: false),
                     Luck = table.Column<int>(nullable: false),
-                    Name = table.Column<string>(nullable: true)
+                    Name = table.Column<string>(nullable: true),
+                    UserId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -228,6 +229,12 @@ namespace Wastelander.Migrations
                         principalTable: "Locations",
                         principalColumn: "LocationId",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Players_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -308,6 +315,11 @@ namespace Wastelander.Migrations
                 column: "LocationId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Players_UserId",
+                table: "Players",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_PlayerItems_ItemId",
                 table: "PlayerItems",
                 column: "ItemId");
@@ -345,13 +357,13 @@ namespace Wastelander.Migrations
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
-
-            migrationBuilder.DropTable(
                 name: "Players");
 
             migrationBuilder.DropTable(
                 name: "Locations");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUsers");
 
             migrationBuilder.DropTable(
                 name: "Items");

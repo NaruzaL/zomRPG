@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Wastelander";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Wastelander.Models.Player
+
+<h2>Player information:</h2>
+<ul>
+    <li>@Html.DisplayFor(model => model.Name)</li>
+    <li>Attack: @Html.DisplayFor(model => model.Attack)</li>
+    <li>Endurance: @Html.DisplayFor(model => model.Endurance)</li>
+    <li>Luck: @Html.DisplayFor(model => model.Luck)</li>
+    <li>Experience: @Html.DisplayFor(model => model.Expierience)</li>
+    <li>Current Location: @Html.DisplayFor(model => model.currentLocation.Name)</li>
+   
+    
+</ul>
+<p>@Html.ActionLink("Add new player", "Create")</p>
+<p>@Html.ActionLink("Back to list", "Index")</p>

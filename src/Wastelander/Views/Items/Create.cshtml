@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Wastelander.Models.Item
+
+<h2>Add a new character</h2>
+<hr />
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
+
+    @Html.LabelFor(model => model.AttackEffect)
+    @Html.EditorFor(model => model.AttackEffect)
+
+    @Html.LabelFor(model => model.EnduranceEffect)
+    @Html.EditorFor(model => model.EnduranceEffect)
+
+    @Html.LabelFor(model => model.LuckEffect)
+    @Html.EditorFor(model => model.LuckEffect)
+
+    @Html.LabelFor(model => model.HealsPlayer)
+    @Html.EditorFor(model => model.HealsPlayer)
+
+    @Html.LabelFor(model => model.Type)
+    @Html.EditorFor(model => model.Type)
+
+    @Html.LabelFor(model => model.Rarity)
+    @Html.EditorFor(model => model.Rarity)
+
+    <input type="submit" value="Create" />
+}
+@Html.ActionLink("Back to List", "Index")

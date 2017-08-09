@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Wastelander";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Wastelander.Models.Item
+
+<h2>Edit</h2>
+<hr />
+<h4>Edit this item: @Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.ItemId)
+    @Html.HiddenFor(model => model.Players)
+
+    <p>@Html.LabelFor(model => model.Name)</p>
+    <p>@Html.EditorFor(model => model.Name)</p>
+
+    <p>@Html.LabelFor(model => model.Type)</p>
+    <p>@Html.EditorFor(model => model.Type)</p>
+
+    <p>@Html.LabelFor(model => model.AttackEffect)</p>
+    <p>@Html.EditorFor(model => model.AttackEffect)</p>
+
+    <p>@Html.LabelFor(model => model.EnduranceEffect)</p>
+    <p>@Html.EditorFor(model => model.EnduranceEffect)</p>
+
+    <p>@Html.LabelFor(model => model.LuckEffect)</p>
+    <p>@Html.EditorFor(model => model.LuckEffect)</p>
+
+    <p>@Html.LabelFor(model => model.Rarity)</p>
+    <p>@Html.EditorFor(model => model.Rarity)</p>
+
+    <p>@Html.LabelFor(model => model.HealsPlayer)</p>
+    <p>@Html.EditorFor(model => model.HealsPlayer)</p>
+
+    <input type="submit" value="Save" />
+}

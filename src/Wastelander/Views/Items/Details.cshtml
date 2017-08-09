@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Wastelander";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Wastelander.Models.Item
+
+<h2>Item information:</h2>
+<ul>
+    <li>@Html.DisplayFor(model => model.Name)</li>
+    <li>Attack Effect: @Html.DisplayFor(model => model.AttackEffect)</li>
+    <li>Endurance Effect: @Html.DisplayFor(model => model.EnduranceEffect)</li>
+    <li>Luck Effect: @Html.DisplayFor(model => model.LuckEffect)</li>
+    <li>Heals Player: @Html.DisplayFor(model => model.HealsPlayer)</li>
+    <li>Type: @Html.DisplayFor(model => model.Type)</li>
+    <li>Rarity: @Html.DisplayFor(model => model.Rarity)</li>
+    
+</ul>
+<p>@Html.ActionLink("Add new item", "Create")</p>
+<p>@Html.ActionLink("Back to list", "Index")</p>

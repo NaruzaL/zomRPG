@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Wastelander";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Wastelander.Models.Player
+
+<h2>Edit</h2>
+<hr />
+<h4>Edit this player: @Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.PlayerId)
+    @Html.HiddenFor(model => model.currentLocation)
+    @Html.HiddenFor(model => model.LocationId)
+    @Html.HiddenFor(model => model.User)
+    @Html.HiddenFor(model => model.Expierience)
+    @Html.HiddenFor(model => model.Items)
+
+
+
+    <p>@Html.LabelFor(model => model.Name)</p>
+    <p>@Html.EditorFor(model => model.Name)</p>
+
+    <p>@Html.LabelFor(model => model.Attack)</p>
+    <p>@Html.EditorFor(model => model.Attack)</p>
+
+    <p>@Html.LabelFor(model => model.Endurance)</p>
+    <p>@Html.EditorFor(model => model.Endurance)</p>
+
+    <p>@Html.LabelFor(model => model.Luck)</p>
+    <p>@Html.EditorFor(model => model.Luck)</p>
+
+    <input type="submit" value="Save" />
+}

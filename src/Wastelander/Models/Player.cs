@@ -19,6 +19,7 @@ namespace Wastelander.Models
         public int Luck { get; set;  }
         public int Expierience { get; set; }
         public int LocationId { get; set; }
+        public virtual ApplicationUser User { get; set; }
         public virtual Location currentLocation { get; set; }
         public virtual ICollection<PlayerItems> Items { get; set; }
     }

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Wastelander.Models.Player>
+
+<h2>Here is your list of characters, @User.Identity.Name</h2>
+<hr />
+
+@if (Model.Any())
+{
+    <ul>
+        <li>Name | Attack | Endurance | Luck</li>
+        <hr />
+        @foreach (var player in Model)
+        {
+            <li>@Html.DisplayFor(model => player.Name) | @Html.DisplayFor(model => player.Attack) | @Html.DisplayFor(model => player.Endurance) | @Html.DisplayFor(model => player.Luck)</li>
+            <li>@Html.ActionLink("Edit", "Edit", new { id = player.PlayerId })</li>
+            <li>@Html.ActionLink("Details", "Details", new { id = player.PlayerId })</li>
+            <li>@Html.ActionLink("Delete", "Delete", new { id = player.PlayerId })</li>
+            <hr />
+
+        }
+    </ul>
+}
+else
+{
+    <p>No tasks have been added yet!</p>
+}
+
+@Html.ActionLink("Create new", "Create")

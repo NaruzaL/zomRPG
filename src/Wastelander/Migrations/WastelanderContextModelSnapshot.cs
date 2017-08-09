@@ -233,9 +233,13 @@ namespace Wastelander.Migrations
 
                     b.Property<string>("Name");
 
+                    b.Property<string>("UserId");
+
                     b.HasKey("PlayerId");
 
                     b.HasIndex("LocationId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Players");
                 });
@@ -329,6 +333,10 @@ namespace Wastelander.Migrations
                         .WithMany()
                         .HasForeignKey("LocationId")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Wastelander.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Wastelander.Models.PlayerItems", b =>
