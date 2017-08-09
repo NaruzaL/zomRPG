@@ -207,6 +207,8 @@
 "C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Wastelander\src\Wastelander\Controllers\ZombieController.cs"
 "C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Wastelander\src\Wastelander\Migrations\20170809171326_Initial.cs"
 "C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Wastelander\src\Wastelander\Migrations\20170809171326_Initial.Designer.cs"
+"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Wastelander\src\Wastelander\Migrations\20170809230839_AddZombieLocationRelationship.cs"
+"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Wastelander\src\Wastelander\Migrations\20170809230839_AddZombieLocationRelationship.Designer.cs"
 "C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Wastelander\src\Wastelander\Migrations\WastelanderContextModelSnapshot.cs"
 "C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Wastelander\src\Wastelander\Models\ApplicationUser.cs"
 "C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Wastelander\src\Wastelander\Models\Item.cs"

@@ -8,9 +8,10 @@ using Wastelander.Models;
 namespace Wastelander.Migrations
 {
     [DbContext(typeof(WastelanderContext))]
-    partial class WastelanderContextModelSnapshot : ModelSnapshot
+    [Migration("20170809230839_AddZombieLocationRelationship")]
+    partial class AddZombieLocationRelationship
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")

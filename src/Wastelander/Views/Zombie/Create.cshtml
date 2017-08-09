@@ -22,6 +22,9 @@
     
     @Html.LabelFor(model => model.ExperienceValue)
     @Html.EditorFor(model => model.ExperienceValue)
+    
+    <h3>Location to Spawn:</h3>
+    @Html.DropDownList("LocationId")
 
     <input type="submit" value="Create" />
 }

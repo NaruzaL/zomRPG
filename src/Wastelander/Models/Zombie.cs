@@ -17,5 +17,7 @@ namespace Wastelander.Models
         public int ZombieHealth { get; set; }
         public int ChanceToDrop { get; set; }
         public int ExperienceValue { get; set; }
+        public int LocationId { get; set; }
+        public virtual Location Location { get; set; }
     }
 }

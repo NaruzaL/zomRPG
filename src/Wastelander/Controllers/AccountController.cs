@@ -4,8 +4,6 @@ using Microsoft.AspNetCore.Identity;
 using Wastelander.Models;
 using Wastelander.ViewModels;
 
-using Wastelander.ViewModels;
-
 namespace BasicAuthentication.Controllers
 {
     public class AccountController : Controller
