@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{628AFCA9-3A06-4D7C-97B8-0676889F4715}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9A8F1A3F-C3F2-49D4-BDFC-9E0FD9C9EA18}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Wastelander", "src\Wastelander\Wastelander.xproj", "{D0F241D6-7C30-43B6-A66F-7E86910B644F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{94F2E480-28D2-4386-B50D-B4710E76EF09}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Wastelander.Tests", "Wastelander.Tests\Wastelander.Tests\Wastelander.Tests.xproj", "{B21A733C-0B88-4AD1-98AB-12B575F91E4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0F241D6-7C30-43B6-A66F-7E86910B644F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0F241D6-7C30-43B6-A66F-7E86910B644F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0F241D6-7C30-43B6-A66F-7E86910B644F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0F241D6-7C30-43B6-A66F-7E86910B644F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B21A733C-0B88-4AD1-98AB-12B575F91E4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B21A733C-0B88-4AD1-98AB-12B575F91E4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B21A733C-0B88-4AD1-98AB-12B575F91E4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B21A733C-0B88-4AD1-98AB-12B575F91E4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D0F241D6-7C30-43B6-A66F-7E86910B644F} = {628AFCA9-3A06-4D7C-97B8-0676889F4715}
+		{B21A733C-0B88-4AD1-98AB-12B575F91E4D} = {94F2E480-28D2-4386-B50D-B4710E76EF09}
+	EndGlobalSection
+EndGlobal
