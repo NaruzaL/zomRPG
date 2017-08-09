@@ -1,5 +1,10 @@
 ﻿@model IEnumerable<Wastelander.Models.Player>
 
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
 <h2>Here is your list of characters, @User.Identity.Name</h2>
 <hr />
 
@@ -21,7 +26,7 @@
 }
 else
 {
-    <p>No tasks have been added yet!</p>
+    <p>No players have been added yet!</p>
 }
 
 @Html.ActionLink("Create new", "Create")

@@ -5,58 +5,59 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Wastelander.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Authorization;
 
 namespace Wastelander.Controllers
 {
-    [Authorize]
-    public class ItemsController : Controller
+    public class ZombieController : Controller
     {
         private WastelanderContext db = new WastelanderContext();
+        [Authorize]
         public IActionResult Index()
         {
-            return View(db.Items.ToList());
+            return View(db.Zombies.ToList());
         }
         public IActionResult Details(int id)
         {
-            var thisItem = db.Items.FirstOrDefault(item => item.ItemId == id);
-            return View(thisItem);
+            var thisZombie = db.Zombies.FirstOrDefault(zombie => zombie.ZombieId == id);
+            return View(thisZombie);
         }
         public IActionResult Create()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult Create(Item item)
+        public IActionResult Create(Zombie zombie)
         {
-            db.Items.Add(item);
+            db.Zombies.Add(zombie);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
         public IActionResult Edit(int id)
         {
-            var thisItem = db.Items.FirstOrDefault(item => item.ItemId == id);
-            return View(thisItem);
+            var thisZombie = db.Zombies.FirstOrDefault(zombie => zombie.ZombieId == id);
+            return View(thisZombie);
         }
 
         [HttpPost]
-        public IActionResult Edit(Item item)
+        public IActionResult Edit(Zombie zombie)
         {
-            db.Entry(item).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            db.Entry(zombie).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
         public IActionResult Delete(int id)
         {
-            var thisItem = db.Items.FirstOrDefault(item => item.ItemId == id);
-            return View(thisItem);
+            var thisZombie = db.Zombies.FirstOrDefault(zombie => zombie.ZombieId == id);
+            return View(thisZombie);
         }
 
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirmed(int id)
         {
-            var thisItem = db.Items.FirstOrDefault(item => item.ItemId == id);
-            db.Items.Remove(thisItem);
+            var thisZombie = db.Zombies.FirstOrDefault(zombie => zombie.ZombieId == id);
+            db.Zombies.Remove(thisZombie);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

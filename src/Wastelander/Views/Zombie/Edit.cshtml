@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Wastelander";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Wastelander.Models.Zombie
+
+<h2>Edit</h2>
+<hr />
+<h4>Edit this Zombie: @Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.ZombieId)
+
+    <p>@Html.LabelFor(model => model.Name)</p>
+    <p>@Html.EditorFor(model => model.Name)</p>
+
+    <p>@Html.LabelFor(model => model.ZombieAttack)</p>
+    <p>@Html.EditorFor(model => model.ZombieAttack)</p>
+
+    <p>@Html.LabelFor(model => model.ZombieHealth)</p>
+    <p>@Html.EditorFor(model => model.ZombieHealth)</p>
+
+    <p>@Html.LabelFor(model => model.ChanceToDrop)</p>
+    <p>@Html.EditorFor(model => model.ChanceToDrop)</p>
+
+    <p>@Html.LabelFor(model => model.ExperienceValue)</p>
+    <p>@Html.EditorFor(model => model.ExperienceValue)</p>
+
+    <input type="submit" value="Save" />
+}

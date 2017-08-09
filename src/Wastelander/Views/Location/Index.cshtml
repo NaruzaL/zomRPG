@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Wastelander.Models.Location>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<hr />
+@Html.ActionLink("Create new", "Create")
+
+@if (Model.Any())
+{
+    <ul>
+        <hr />
+        @foreach (var location in Model)
+        {
+            <li>@Html.DisplayFor(model => location.Name)</li>
+            <li>@Html.ActionLink("Edit", "Edit", new { id = location.LocationId })</li>
+            <li>@Html.ActionLink("Details", "Details", new { id = location.LocationId })</li>
+            <li>@Html.ActionLink("Delete", "Delete", new { id = location.LocationId })</li>
+            <hr />
+
+        }
+    </ul>
+}
+else
+{
+    <p>No locations have been added yet!</p>
+}

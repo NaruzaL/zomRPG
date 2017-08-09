@@ -1,6 +1,10 @@
 ﻿@model IEnumerable<Wastelander.Models.Item>
-
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 <hr />
+@Html.ActionLink("Create new", "Create")
 
 @if (Model.Any())
 {
@@ -8,7 +12,7 @@
         <hr />
         @foreach (var item in Model)
         {
-            <li>@Html.DisplayFor(model => item.Name)</li>
+            <li>@Html.DisplayFor(model => item.Name) | @Html.DisplayFor(model => item.Type)</li>
             <li>@Html.ActionLink("Edit", "Edit", new { id = item.ItemId })</li>
             <li>@Html.ActionLink("Details", "Details", new { id = item.ItemId })</li>
             <li>@Html.ActionLink("Delete", "Delete", new { id = item.ItemId })</li>
@@ -19,7 +23,5 @@
 }
 else
 {
-    <p>No tasks have been added yet!</p>
+    <p>No items have been added yet!</p>
 }
-
-@Html.ActionLink("Create new", "Create")

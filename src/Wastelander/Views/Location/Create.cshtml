@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Wastelander.Models.Location
+
+<h2>Add a new location</h2>
+<hr />
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
+
+    @Html.LabelFor(model => model.SpawnEnemy)
+    @Html.EditorFor(model => model.SpawnEnemy)
+
+    @Html.LabelFor(model => model.Description)
+    @Html.EditorFor(model => model.Description)
+
+    <h4>Item in Room: </h4>
+    @Html.DropDownList("ItemId")
+
+    <input type="submit" value="Create" />
+}
+@Html.ActionLink("Back to List", "Index")

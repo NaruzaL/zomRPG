@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Wastelander.Models.Zombie
+
+<h2>Add a new Zombie</h2>
+<hr />
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
+
+    @Html.LabelFor(model => model.ZombieAttack)
+    @Html.EditorFor(model => model.ZombieAttack)
+
+    @Html.LabelFor(model => model.ZombieHealth)
+    @Html.EditorFor(model => model.ZombieHealth)
+
+    @Html.LabelFor(model => model.ChanceToDrop)
+    @Html.EditorFor(model => model.ChanceToDrop)
+    
+    @Html.LabelFor(model => model.ExperienceValue)
+    @Html.EditorFor(model => model.ExperienceValue)
+
+    <input type="submit" value="Create" />
+}
+@Html.ActionLink("Back to List", "Index")

@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Wastelander";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Wastelander.Models.Location
+
+<h2>Item information:</h2>
+<ul>
+    <li>@Html.DisplayFor(model => model.Name)</li>
+    <li>Description: @Html.DisplayFor(model => model.Description)</li>
+    <li>Spawn Enemy Chance: @Html.DisplayFor(model => model.SpawnEnemy) / 20</li>
+    <li>Item in room: @Html.DisplayFor(model => model.Item.Name)</li>
+</ul>
+<p>@Html.ActionLink("Add new item", "Create")</p>
+<p>@Html.ActionLink("Back to list", "Index")</p>

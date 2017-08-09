@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Wastelander.Models.Zombie>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<hr />
+
+@if (Model.Any())
+{
+    <ul>
+        <hr />
+        @foreach (var Zombie in Model)
+        {
+            <li>@Html.DisplayFor(model => Zombie.Name)</li>
+            <li>@Html.ActionLink("Edit", "Edit", new { id = Zombie.ZombieId })</li>
+            <li>@Html.ActionLink("Details", "Details", new { id = Zombie.ZombieId })</li>
+            <li>@Html.ActionLink("Delete", "Delete", new { id = Zombie.ZombieId })</li>
+            <hr />
+
+        }
+    </ul>
+}
+else
+{
+    <p>No zombies have been added yet!</p>
+}
+
+@Html.ActionLink("Create new", "Create")
