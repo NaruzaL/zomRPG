@@ -9,7 +9,9 @@
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
         <link rel="stylesheet" href="~/css/styles.css" />
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+        
 
     </environment>
     <environment names="Staging,Production">
@@ -20,10 +22,15 @@
     </environment>
 </head>
 <body>
-        <h2>Wastelander</h2>
+        <h2><span class="wler">Wastelander</span></h2>
+    
+
+    <img id="zomb" src="~/Images/gif.gif" />
+    
     <header>
-        @Html.ActionLink("Play", "Index", "Game")
-        @Html.ActionLink("Admin", "Index", "Admin")
+        <span class="play">@Html.ActionLink("Play", "Index", "Game")</span>
+        <span class="admin">@Html.ActionLink("Admin", "Index", "Admin")</span>
+        
     </header>
 
     <div class="container body-content">

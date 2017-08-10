@@ -8,6 +8,7 @@
 <hr />
 @using (Html.BeginForm())
 {
+    <div id="zombieForm">
     @Html.LabelFor(model => model.Name)
     @Html.EditorFor(model => model.Name)
 
@@ -26,6 +27,8 @@
     <h3>Location to Spawn:</h3>
     @Html.DropDownList("LocationId")
 
+
+    </div>
     <input type="submit" value="Create" />
 }
 @Html.ActionLink("Back to List", "Index")

@@ -8,6 +8,7 @@
 <hr />
 @using (Html.BeginForm())
 {
+    <div id="locationForm">
     @Html.LabelFor(model => model.Name)
     @Html.EditorFor(model => model.Name)
 
@@ -21,5 +22,7 @@
     @Html.DropDownList("ItemId")
 
     <input type="submit" value="Create" />
+
+    </div>
 }
 @Html.ActionLink("Back to List", "Index")

@@ -6,10 +6,12 @@
 
 <h2>Edit</h2>
 <hr />
-<h4>Edit this Zombie: @Html.DisplayFor(model => model.Name)</h4>
 
 @using (Html.BeginForm())
 {
+    <div id="zombieEdit">
+<h4>Edit this Zombie: @Html.DisplayFor(model => model.Name)</h4>
+
     @Html.HiddenFor(model => model.ZombieId)
 
     <p>@Html.LabelFor(model => model.Name)</p>
@@ -27,5 +29,9 @@
     <p>@Html.LabelFor(model => model.ExperienceValue)</p>
     <p>@Html.EditorFor(model => model.ExperienceValue)</p>
 
+    <p>@Html.LabelFor(model => model.Location)</p>
+    <p>@Html.EditorFor(model => model.LocationId)</p>
+
     <input type="submit" value="Save" />
+    </div>
 }

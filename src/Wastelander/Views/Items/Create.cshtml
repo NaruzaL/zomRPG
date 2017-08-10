@@ -8,6 +8,7 @@
 <hr />
 @using (Html.BeginForm())
 {
+    <div id="itemForm">
     @Html.LabelFor(model => model.Name)
     @Html.EditorFor(model => model.Name)
 
@@ -30,5 +31,7 @@
     @Html.EditorFor(model => model.Rarity)
 
     <input type="submit" value="Create" />
+
+    </div>
 }
 @Html.ActionLink("Back to List", "Index")

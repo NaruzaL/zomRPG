@@ -6,10 +6,11 @@
 
 <h2>Edit</h2>
 <hr />
-<h4>Edit this player: @Html.DisplayFor(model => model.Name)</h4>
 
 @using (Html.BeginForm())
 {
+    <div id="playerEdit">
+<h4>Edit this player: @Html.DisplayFor(model => model.Name)</h4>
     @Html.HiddenFor(model => model.PlayerId)
     @Html.HiddenFor(model => model.currentLocation)
     @Html.HiddenFor(model => model.LocationId)
@@ -32,4 +33,6 @@
     <p>@Html.EditorFor(model => model.Luck)</p>
 
     <input type="submit" value="Save" />
+
+    </div>
 }

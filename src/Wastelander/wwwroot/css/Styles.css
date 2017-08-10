@@ -1,0 +1,67 @@
+﻿body {
+    text-align: center;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.wler {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 50px;
+}
+
+#zomb {
+    width: 100px;
+}
+
+.play {
+    margin-right: 40px;
+}
+
+.admin {
+    margin-left: 40px;
+}
+
+ul {
+    align-content: center;
+    flex-direction: column;
+    list-style: none;
+    font-family: 'Permanent Marker', cursive;
+    background-color: rgba(220, 211, 211, 0.56);
+    color: black;
+}
+
+
+header {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+}
+
+.container {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 18px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    margin: 25px;
+    font-family: 'Permanent Marker', cursive;
+    justify-content:space-between;
+    font-size: 22px;
+}
+
+#itemForm, #playerForm, #locationForm, #zombieForm {
+    background-color: rgba(220, 211, 211, 0.56);
+    color: black;
+}
+
+#itemEdit, #playerEdit, #locationEdit, #zombieEdit {
+     background-color: rgba(220, 211, 211, 0.56);
+    color: black;
+}
+
+#awesome {
+   width: 500px;
+}

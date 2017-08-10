@@ -2,7 +2,11 @@
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@Html.ActionLink("Player Manager", "Index", "Player")
-@Html.ActionLink("Zombie Manager", "Index", "Zombie")
-@Html.ActionLink("Location Manager", "Index", "Location")
-@Html.ActionLink("Item Manager", "Index", "Items")
+<div class="nav">
+    
+        <p>@Html.ActionLink("Player Manager", "Index", "Player")</p>
+        <p>@Html.ActionLink("Zombie Manager", "Index", "Zombie")</p>
+        <p>@Html.ActionLink("Location Manager", "Index", "Location")</p>
+        <p>@Html.ActionLink("Item Manager", "Index", "Items")</p>
+   
+</div>

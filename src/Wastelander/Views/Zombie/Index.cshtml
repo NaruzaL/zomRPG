@@ -4,6 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <hr />
+@Html.ActionLink("Create new", "Create")
 
 @if (Model.Any())
 {
@@ -24,5 +25,3 @@ else
 {
     <p>No zombies have been added yet!</p>
 }
-
-@Html.ActionLink("Create new", "Create")

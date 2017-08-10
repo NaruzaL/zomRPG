@@ -7,10 +7,10 @@
 <h2>Item information:</h2>
 <ul>
     <li>@Html.DisplayFor(model => model.Name)</li>
-    <li>Description: @Html.DisplayFor(model => model.ZombieAttack)</li>
-    <li>Spawn Enemy Chance: @Html.DisplayFor(model => model.ZombieHealth)</li>
-    <li>Item in room: @Html.DisplayFor(model => model.ChanceToDrop) /20</li>
-    <li>Item in room: @Html.DisplayFor(model => model.ExperienceValue)</li>
+    <li>Attack: @Html.DisplayFor(model => model.ZombieAttack)</li>
+    <li>Health: @Html.DisplayFor(model => model.ZombieHealth)</li>
+    <li>Chance to spawn item: @Html.DisplayFor(model => model.ChanceToDrop) /20</li>
+    <li>Experience value: @Html.DisplayFor(model => model.ExperienceValue)</li>
 </ul>
 <p>@Html.ActionLink("Add new Zombie", "Create")</p>
 <p>@Html.ActionLink("Back to list", "Index")</p>

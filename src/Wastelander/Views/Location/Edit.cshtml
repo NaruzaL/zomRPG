@@ -6,10 +6,11 @@
 
 <h2>Edit</h2>
 <hr />
-<h4>Edit this location: @Html.DisplayFor(model => model.Name)</h4>
 
 @using (Html.BeginForm())
 {
+    <div id="locationEdit">
+<h4>Edit this location: @Html.DisplayFor(model => model.Name)</h4>
     @Html.HiddenFor(model => model.LocationId)
 
     <p>@Html.LabelFor(model => model.Name)</p>
@@ -25,4 +26,6 @@
     <p>@Html.EditorFor(model => model.ItemId)</p>
 
     <input type="submit" value="Save" />
+
+    </div>
 }
