@@ -58,7 +58,7 @@ header {
 }
 
 #itemEdit, #playerEdit, #locationEdit, #zombieEdit {
-     background-color: rgba(220, 211, 211, 0.56);
+    background-color: rgba(220, 211, 211, 0.56);
     color: black;
 }
 
